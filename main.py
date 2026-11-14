@@ -7,7 +7,7 @@ class Post(BaseModel):
     title:str
     content:str
     published:bool=True #default value is true
-    rating:Optional[int]=None #default it is null
+    rating:Optional[int]=None #default it is null or int thats the use of optional
 
 @app.get("/")
 def root():
