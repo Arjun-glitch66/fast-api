@@ -55,7 +55,11 @@ def delete_post(id: int):
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"post with id: {id} does not exist"
         )
+    print("Before delete")
+    print(my_posts)
     my_posts.pop(index)
+    print("After delete")
+    print(my_posts)
     return Response(status_code=status.HTTP_204_NO_CONTENT) #no content masn status is deleted 
 
 
